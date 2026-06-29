@@ -129,6 +129,7 @@
   .tl-dot.b{border-color:var(--accent-2);box-shadow:0 0 0 4px rgba(110,231,199,.12)}
   .tl-dot.c{border-color:var(--accent-3);box-shadow:0 0 0 4px rgba(246,184,107,.12)}
   .tl-dot.d{border-color:var(--accent-4);box-shadow:0 0 0 4px rgba(232,121,166,.12)}
+  .tl-dot.e{border-color:#7c5cf0;box-shadow:0 0 0 4px rgba(124,92,240,.14)}
   .tl-year{font-family:var(--serif);font-weight:700;font-size:20px;color:var(--ink)}
   .tl-item p{margin:.2em 0;font-size:14.5px}
 
@@ -212,14 +213,16 @@
         <div class="tl-item"><span class="tl-dot b"></span><div class="tl-year">≈ 1949</div><p><strong>第一代汇编系统</strong> · 剑桥 EDSAC 的 <b>Initial Orders</b>，设计约 1948，EDSAC 1949 投入常规服务。</p></div>
         <div class="tl-item"><span class="tl-dot c"></span><div class="tl-year">1951 — 1952</div><p><strong>第一代编译器雏形</strong> · Grace Hopper 的 <b>A-0</b>，常被称为最早的「compiler」，但更像链接器 / 装载器。</p></div>
         <div class="tl-item"><span class="tl-dot d"></span><div class="tl-year">1957</div><p><strong>影响巨大的高级语言编译器</strong> · IBM <b>FORTRAN</b> 编译器商业发布，设计始于 1954，第一个极具影响力的高效高级语言编译器。</p></div>
+        <div class="tl-item"><span class="tl-dot e"></span><div class="tl-year">≈ 2024 — 2025</div><p><strong>Agentic Coding（AI Agent 编程）成形</strong> · 早期实验始于 2023（AutoGPT 等），2024 年 Cognition 的 <b>Devin</b> 以「首个 AI 软件工程师」打响概念，2025 年 <b>Claude Code</b>、Codex、Cursor Agent 等让「描述目标 → 委托 AI 操作工具链」走向主流。这是继汇编器、编译器之后的第四次抽象跃迁，但仍处在「证明自己」的阶段。</p></div>
       </div>
 
       <!-- SVG ERA STRIP -->
       <figure>
-        <svg viewBox="0 0 420 300" role="img" aria-label="编程方式演进示意">
+        <svg viewBox="0 0 420 380" role="img" aria-label="编程方式演进示意">
           <defs>
             <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c9eff"/><stop offset="1" stop-color="#6ee7c7"/></linearGradient>
             <linearGradient id="gW" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6b86b"/><stop offset="1" stop-color="#e879a6"/></linearGradient>
+            <linearGradient id="gG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cf0"/><stop offset="1" stop-color="#3b6fe0"/></linearGradient>
           </defs>
           <!-- era 1: wires -->
           <g transform="translate(20,24)">
@@ -247,13 +250,20 @@
             <text x="14" y="44" fill="#79839a" font-size="11">1957 — 表达问题本身</text>
             <text x="250" y="38" fill="#d6558a" font-family="ui-monospace,monospace" font-size="13">Y = A*X + B</text>
           </g>
+          <!-- era 4: agentic coding -->
+          <g transform="translate(20,264)">
+            <rect width="380" height="58" rx="10" fill="#eef2f8" stroke="rgba(124,92,240,.38)"/>
+            <text x="14" y="24" fill="#171c26" font-family="Georgia" font-size="14">自然语言 · 委托给 AI Agent</text>
+            <text x="14" y="44" fill="#79839a" font-size="11">≈2024— — 描述目标即编程</text>
+            <text x="238" y="38" fill="#7c5cf0" font-family="ui-monospace,monospace" font-size="13">「帮我做个…」</text>
+          </g>
           <!-- arrow -->
           <g transform="translate(10,82)" opacity=".9">
-            <path d="M0 0 V120" stroke="url(#gA)" stroke-width="3" fill="none"/>
-            <path d="M-5 112 L0 124 L5 112 Z" fill="#15b794"/>
+            <path d="M0 0 V200" stroke="url(#gA)" stroke-width="3" fill="none"/>
+            <path d="M-5 192 L0 204 L5 192 Z" fill="#7c5cf0"/>
           </g>
         </svg>
-        <figcaption>编程抽象层级的三次跃迁：从位模式 → 符号指令 → 问题表达</figcaption>
+        <figcaption>编程抽象层级的四次跃迁：位模式 → 符号指令 → 问题表达 → 目标委托</figcaption>
       </figure>
     </div>
 
@@ -266,6 +276,7 @@
           <tr><td>第一代汇编器 / 汇编系统</td><td><span class="yr">≈1949</span></td><td>剑桥 EDSAC 的 Initial Orders，设计约 1948，1949 投入服务</td></tr>
           <tr><td>第一代编译器</td><td><span class="yr">1951—1952</span></td><td>Grace Hopper 的 A-0，更像链接器 / 装载器</td></tr>
           <tr><td>影响巨大的高级语言编译器</td><td><span class="yr">1957</span></td><td>IBM FORTRAN，设计始于 1954，第一个高效高级语言编译器</td></tr>
+          <tr><td>Agentic Coding（AI Agent 编程）</td><td><span class="yr">≈2024—2025</span></td><td>2023 起出现 AutoGPT 等早期实验；2024 Devin 打响「AI 软件工程师」概念；2025 Claude Code / Codex / Cursor Agent 等走向主流</td></tr>
         </tbody>
       </table>
     </div>
