@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f6f7fb">
+<title>暑期实习培训 · 课程目录</title>
+<style>
+  :root{
+    --bg:#f6f7fb;
+    --bg-soft:#ffffff;
+    --panel:#ffffff;
+    --panel-2:#eef1f7;
+    --line:rgba(20,30,55,.10);
+    --line-strong:rgba(20,30,55,.18);
+    --ink:#1b2030;
+    --ink-soft:#475067;
+    --ink-dim:#8089a0;
+    --accent:#4f6fe0;
+    --accent-2:#119e86;
+    --accent-3:#d2872a;
+    --accent-4:#cf5689;
+    --grad:linear-gradient(120deg,#4f6fe0 0%,#119e86 100%);
+    --grad-warm:linear-gradient(120deg,#e0902f 0%,#cf5689 100%);
+    --radius:18px;
+    --maxw:960px;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif;
+    --serif:"Iowan Old Style","Apple Garamond",Georgia,"Times New Roman","Songti SC",serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:var(--font);line-height:1.75;font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(900px 500px at 80% -10%,rgba(79,111,224,.10),transparent 60%),
+      radial-gradient(700px 500px at -10% 10%,rgba(17,158,134,.08),transparent 55%);
+    background-attachment:fixed;
+    min-height:100vh;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+  /* ---------- Top nav ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:saturate(160%) blur(14px);
+    background:rgba(255,255,255,.78);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;gap:14px;height:58px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
+  .brand .dot{width:26px;height:26px;border-radius:8px;background:var(--grad);display:inline-block;box-shadow:0 4px 14px rgba(79,111,224,.35)}
+  .brand small{font-weight:500;color:var(--ink-dim);font-size:12px;display:block;letter-spacing:.5px;text-transform:uppercase}
+  .nav-meta{margin-left:auto;font-size:13px;color:var(--ink-dim)}
+  @media(max-width:560px){.nav-meta{display:none}}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:64px 0 24px}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent-2);border:1px solid var(--line-strong);padding:6px 14px;border-radius:999px;background:var(--panel)
+  }
+  .eyebrow .pulse{width:7px;height:7px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 0 0 rgba(17,158,134,.5);animation:pulse 2.2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(17,158,134,.45)}70%{box-shadow:0 0 0 9px rgba(17,158,134,0)}100%{box-shadow:0 0 0 0 rgba(17,158,134,0)}}
+  h1.title{
+    font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.5px;
+    font-size:clamp(32px,7vw,54px);margin:22px 0 14px;
+  }
+  h1.title .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{font-size:clamp(15px,2.4vw,19px);color:var(--ink-soft);max-width:680px}
+
+  /* ---------- Section ---------- */
+  section{padding:30px 0 10px}
+  .kicker{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .kicker .num{
+    font-family:var(--serif);font-size:13px;color:#fff;background:var(--accent);
+    width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-weight:700;flex:none
+  }
+  .kicker span.tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-dim)}
+  h2{font-family:var(--serif);font-weight:600;font-size:clamp(21px,4vw,28px);line-height:1.2;margin:0;color:var(--ink)}
+
+  /* ---------- Course list ---------- */
+  .courses{display:grid;gap:18px;margin-top:6px}
+  a.course{
+    display:block;text-decoration:none;color:inherit;position:relative;overflow:hidden;
+    background:linear-gradient(180deg,#ffffff,#f6f7fb);
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 22px 22px;
+    box-shadow:0 1px 2px rgba(20,30,55,.04);
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  a.course:before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--grad)}
+  a.course.warm:before{background:var(--grad-warm)}
+  a.course:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(20,30,55,.12);border-color:var(--line-strong)}
+  a.course:active{transform:translateY(-1px)}
+  .c-top{display:flex;align-items:flex-start;gap:16px}
+  .c-idx{
+    flex:none;width:52px;height:52px;border-radius:14px;display:grid;place-items:center;
+    font-family:var(--serif);font-size:24px;font-weight:700;color:#fff;background:var(--grad);
+    box-shadow:0 6px 16px rgba(79,111,224,.28)
+  }
+  a.course.warm .c-idx{background:var(--grad-warm);box-shadow:0 6px 16px rgba(207,86,137,.26)}
+  .c-head{flex:1;min-width:0}
+  .c-eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dim);font-family:var(--mono)}
+  .c-title{font-family:var(--serif);font-size:clamp(19px,3.6vw,24px);font-weight:600;margin:2px 0 0;line-height:1.25;color:var(--ink)}
+  .c-desc{color:var(--ink-soft);font-size:14.5px;margin:14px 0 0}
+  .c-tags{margin:14px 0 0;display:flex;flex-wrap:wrap;gap:7px}
+  .pill{font-size:11.5px;padding:3px 11px;border-radius:999px;border:1px solid var(--line-strong);color:var(--ink-soft)}
+  .pill.a{color:var(--accent);border-color:rgba(79,111,224,.4)}
+  .pill.b{color:var(--accent-2);border-color:rgba(17,158,134,.4)}
+  .pill.c{color:var(--accent-3);border-color:rgba(210,135,42,.4)}
+  .pill.d{color:var(--accent-4);border-color:rgba(207,86,137,.4)}
+  .c-foot{margin:18px 0 0;display:flex;align-items:center;justify-content:space-between;gap:12px;
+    border-top:1px solid var(--line);padding-top:14px}
+  .c-meta{font-size:12.5px;color:var(--ink-dim)}
+  .c-go{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14px;color:var(--accent)}
+  a.course.warm .c-go{color:var(--accent-4)}
+  .c-go .arrow{transition:transform .18s ease}
+  a.course:hover .c-go .arrow{transform:translateX(4px)}
+  @media(max-width:480px){
+    .c-top{gap:13px}
+    .c-idx{width:44px;height:44px;border-radius:12px;font-size:20px}
+  }
+
+  footer{margin-top:36px;padding:28px 0 56px;border-top:1px solid var(--line);color:var(--ink-dim);font-size:13px}
+  footer .brand{margin-bottom:10px}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand"><span class="dot"></span><div>Summer&nbsp;Internship&nbsp;Training<small>暑期实习培训</small></div></div>
+    <div class="nav-meta">课程目录 · 持续更新</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow"><span class="pulse"></span>Training · 课程目录</span>
+    <h1 class="title">暑期实习培训<br><span class="g">从编程工具史到 AI Agent</span></h1>
+    <p class="lede">本目录汇总实习培训的阅读材料，点击任意卡片即可进入对应专题页面。内容会持续补充，先从「编程工具的演进」与「现代 AI Agent」两讲开始。</p>
+  </div>
+</div>
+
+<!-- COURSES -->
+<section>
+  <div class="wrap">
+    <div class="kicker"><span class="num">≡</span><span class="tag">Modules</span></div>
+    <h2>课程目录</h2>
+
+    <div class="courses">
+
+      <!-- Module 1 -->
+      <a class="course warm" href="assembler-compiler-agent-history.html">
+        <div class="c-top">
+          <div class="c-idx">01</div>
+          <div class="c-head">
+            <div class="c-eyebrow">Module 01 · 编程工具演进史</div>
+            <div class="c-title">重塑编程的三次跃迁 · 汇编器、编译器与 AI Agent</div>
+          </div>
+        </div>
+        <p class="c-desc">三次抽象层跃迁，把编程从「直接操纵机器」推向「表达问题本身」，再到「描述意图、审查结果」——也不断改写着「谁能制造软件」。从 1941 年第一台计算机讲到 2026 年的 AI Agent 编程。</p>
+        <div class="c-tags">
+          <span class="pill c">计算机史</span>
+          <span class="pill c">汇编器 / 编译器</span>
+          <span class="pill d">AI Agent · Vibe Coding</span>
+          <span class="pill">抽象层跃迁</span>
+        </div>
+        <div class="c-foot">
+          <span class="c-meta">14 个章节 · 含时间轴与图表</span>
+          <span class="c-go">进入阅读 <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <!-- Module 2 -->
+      <a class="course" href="sensepedia-ai-agent-introduction.html">
+        <div class="c-top">
+          <div class="c-idx">02</div>
+          <div class="c-head">
+            <div class="c-eyebrow">Module 02 · 现代 AI Agent</div>
+            <div class="c-title">现代 AI Agent · 与 SensePedia 的智能体地图</div>
+          </div>
+        </div>
+        <p class="c-desc">像 Claude Code、Codex 那样，给一个目标，它就自己拆解、调工具、看结果、改计划，直到把事情做完。讲清楚什么是现代 AI Agent、有哪些范式，以及 SensePedia 平台实际用了哪几种。</p>
+        <div class="c-tags">
+          <span class="pill a">AI Agent 定义</span>
+          <span class="pill b">ReAct / 工具调用</span>
+          <span class="pill a">分类范式</span>
+          <span class="pill b">SensePedia 实践</span>
+        </div>
+        <div class="c-foot">
+          <span class="c-meta">6 个章节 · 含架构图与对照表</span>
+          <span class="c-go">进入阅读 <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span><div>暑期实习培训</div></div>
+    <p style="margin:.3em 0">课程目录 · 共 2 讲（持续更新）· 点击卡片进入对应专题</p>
+    <p style="color:var(--ink-dim);font-size:12px">生成于 2026。</p>
+  </div>
+</footer>
+
+</body>
+</html>
